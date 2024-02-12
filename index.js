@@ -8,7 +8,7 @@ app.set("view engine", "ejs")
 app.set("views", "style")
 
 app.get("/", (req, res) => {
-    res.render("index")
+    res.render("home")
 });
 
 app.get("/flower", (req, res) => {
