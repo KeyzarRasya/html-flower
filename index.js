@@ -2,13 +2,13 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-app.use(express.static("style"))
+app.use(express.static("static"))
 
 app.set("view engine", "ejs")
-app.set("views", "style")
+
 
 app.get("/", (req, res) => {
-    res.sendfile(path.join(__dirname + "/style/home.html"))
+    res.sendfile(path.join(__dirname + "/static/home.html"))
 });
 
 app.get("/flower", (req, res) => {
