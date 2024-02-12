@@ -8,7 +8,7 @@ app.set("view engine", "ejs")
 app.set("views", "style")
 
 app.get("/", (req, res) => {
-    res.render("home")
+    res.sendfile(path.join(__dirname + "/home.html"))
 });
 
 app.get("/flower", (req, res) => {
