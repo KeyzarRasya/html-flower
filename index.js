@@ -5,7 +5,7 @@ const app = express();
 app.use(express.static("static"))
 
 app.set("view engine", "ejs")
-
+app.set("views", path.join(__dirname, "views"))
 
 app.get("/", (req, res) => {
     res.sendfile(path.join(__dirname + "/static/home.html"))
